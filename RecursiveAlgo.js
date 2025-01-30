@@ -20,7 +20,25 @@ alert("Le prix du billet est de " + prix + " $.");
 //.
 //.
 //.
-//sujet02:
+//sujet 02
+function estBissextile(annee) {
+    if ((annee % 4 === 0 && annee % 100 !== 0) || annee % 400 === 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+// Test de la fonction
+console.log(estBissextile(2024)); // true
+console.log(estBissextile(1900)); // false
+console.log(estBissextile(2000)); // true
+console.log(estBissextile(2023)); // false
+
+//.
+//.
+//.
+//sujet03:
 //Séquence de Fibonacci :
 function fibonacci(n) {
     if (n <= 1) {
@@ -30,3 +48,24 @@ function fibonacci(n) {
 }
 
 console.log(fibonacci(6));
+//.
+//.
+//.
+//.
+//sujet04:
+function puissance(base, exposant) {
+    if (exposant === 0) {
+        return 1;
+    }
+
+    if (exposant > 0) {
+        return base * puissance(base, exposant - 1);
+    }
+
+    return 1 / puissance(base, -exposant);
+}
+
+// Exemple d'utilisation
+console.log(puissance(2, 3)); // Affiche 8
+console.log(puissance(5, -2)); // Affiche 0.04
+console.log(puissance(7, 0)); // Affiche 1
